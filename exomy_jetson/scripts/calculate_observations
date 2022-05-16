@@ -1,0 +1,13 @@
+#!/usr/bin/env python
+import rospy
+from nav_msgs.msg import Odometry
+
+
+def callback(msg):
+    print msg.pose.pose
+
+rospy.init_node('totally_not_a_CA')
+odom_sub = rospy.Subscriber('/rtabmap/odom', Odometry, callback)
+target_sub = 
+
+rospy.spin()
